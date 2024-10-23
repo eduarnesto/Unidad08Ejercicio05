@@ -12,7 +12,7 @@
 
         <ScrollView Grid.Row="0">
             <VerticalStackLayout>
-                <ListView x:Name="listaView" ItemsSource="{Binding lista}" BackgroundColor="LightGray">
+                <ListView x:Name="listaView" BackgroundColor="LightGray">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <TextCell Text="{Binding Nombre}"

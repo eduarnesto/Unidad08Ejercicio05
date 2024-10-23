@@ -1,4 +1,5 @@
 ﻿using AccesoBBDD;
+using BibliotecaClases;
 
 namespace Ejercicio05
 {
@@ -10,7 +11,7 @@ namespace Ejercicio05
         {
             InitializeComponent();
 
-            var lista = ListadoPersonas.getListadoPersonas();
+            List<ClsPersona> lista = ListadoPersonas.getListadoPersonas();
 
             listaView.ItemsSource = lista;
         }
