@@ -1,4 +1,6 @@
-﻿namespace Ejercicio05
+﻿using AccesoBBDD;
+
+namespace Ejercicio05
 {
     public partial class MainPage : ContentPage
     {
@@ -7,19 +9,12 @@
         public MainPage()
         {
             InitializeComponent();
+
+            var lista = ListadoPersonas.getListadoPersonas();
+
+            listaView.ItemsSource = lista;
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
-        {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
-        }
     }
 
 }
